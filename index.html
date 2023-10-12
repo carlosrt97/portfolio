@@ -59,6 +59,7 @@
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Profile</span></a></li>
           <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Skills</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#pack" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Dummy battery pack</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Numerical simulations</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Courses</span></a></li>
         <!--  <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>  -->
@@ -95,7 +96,7 @@
             <p>
               I’m a Physics Engineer with a deep mechanical engineering background, specialized in computational fluid dynamics, using numerical methods and commerical software. Currently working as a <b>Thermal Simulation Engineer</b> at <b>Stellantis</b>, where I perform any thermal and/or flow simulation/analysis related to high-voltage battery packs of Stellantis electric vehicle (EV) platforms.
               
-              I have demonstrated to be a <b>proactive</b> and <b>passionate</b> person, capable of working under pressure in fast paced environments while delivering high quality results.
+              I have demonstrated to be a <b>proactive</b> and <b>passionate</b> person, capable of working under pressure in fast paced environments while delivering high-quality results.
             </p>
             <div class="row">
               <div class="col-lg-6">
@@ -115,7 +116,7 @@
               </div>
             </div>
             <p>
-              <b>Interests:</b> Structural, thermal and flow modeling and analysis, mechanical design, data analysis, numerical simulations and high-performance computing (HPC)
+              <b>Interests:</b> Thermal, flow and structural modeling and analysis, mechanical design, data analysis, numerical simulations and high-performance computing (HPC)
             </p>
           </div>
         </div>
@@ -202,10 +203,10 @@
           <div class="col-lg-4" data-aos="fade-up">
             <b>Programming:</b> 
             <ul>
+              <li>MATLAB</li>
+              <li>Python</li>
               <li>C++</li>
               <li>Fortran</li>
-              <li>Python</li>
-              <li>MATLAB</li>
               <li>HPC (Linux, OpenMP, Bash)</li>
               <li>LaTeX</li>
             </ul>
@@ -288,8 +289,8 @@
               <ul>
                 <li>Performed fluid-structure interaction numerical simulations of the 3D flow around a rigid oscillating airfoil, using a
                   high-performance computing multi-physics solver (Alya) adapted to multiple computer clusters, and generated grids using ANSA.</li>
-                <li>Carried out aerodynamic analyses such as that of the wake’s structure, vortex shedding, nonlinear forces (drag and lift) and of the
-                  transition to a turbulent flow due to instabilities.</li>
+                <li>Validated the model with experimental data and 2D simulations, and carried out aerodynamic analyses such as that of the wake’s
+                  structure, vortex shedding, nonlinear forces (drag and lift) and of the transition to a turbulent flow due to instabilities.</li>
                 <li>Presented these results at two national congresses of fluid dynamics.</li>
               </ul>
             </div>
@@ -322,6 +323,196 @@
 
       </div>
     </section><!-- End Resume Section -->
+
+
+
+
+<!-- ======= Portfolio Section ======= -->
+<section id="pack" class="portfolio section-bg">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Dummy Battery Pack</h2>
+      <p> This is a very simplified battery pack I designed just to show a few outputs that can be obtained from battery gas venting and module-to-module thermal propagation simulations </p>
+    </div>
+
+
+
+    <p> This battery pack consists of the following    </p>
+
+    <div class="row skills-content">
+
+      <div class="col-lg-4" data-aos="fade-up">
+        <b>At module level:</b>
+        <ul>
+          <li>12 pouch cells (6S2P configuration) </li>
+          <li> Internal busbars</li>
+          <li> Endplates</li>
+          <li> Busbar frames </li>
+          <li> Insulation layers</li>
+          <li>Mica sheets </li>
+          <li>U-frame</li>
+          <li> Compression pads</li>
+  
+        </ul>
+      </div>
+
+    <div class="col-lg-4" data-aos="fade-up">
+      <b>At pack level: </b>
+      <ul>
+        <li> Modules (8) </li>
+        <li> HV busbars </li>
+        <li>  Structural components </li>
+        <li> Thermal systems (only cooling plates and lines)</li>
+        <li> Valves/degassing units (4) </li>
+      </ul>
+
+    </div>
+
+    </div>
+
+    
+
+
+    <div class="row skills-content">
+
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <img src="assets/img/pack.png" class="img-fluid" alt="">
+      </div>
+
+
+      <div class="col-lg-4" data-aos="fade-up">
+        <img src="assets/img/module.png" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-3" data-aos="fade-up">
+        <img src="assets/img/cooling.png" class="img-fluid" alt="">
+      </div>
+
+
+      <p></p>
+      <br>
+      <p></p>
+
+      <p> <b>1. Battery Gas Venting </b> </p>
+
+      <ul>
+        <li> Generally, inputs come from 1D simulation and heating pad tests, and represent the mass flow rate (MFR) released by a single cell in a thermal runaway (TR) event.</li>
+        <li>  The MFR profile used here corresponds to a very relaxed scenario (usually it can be 5 times bigger in magnitude).</li>
+      </ul>
+
+       
+
+      
+      <div class="col-lg-4" data-aos="fade-up">
+        <img src="assets/img/gasTemp.gif" class="img-fluid" alt="">
+      </div>
+
+
+      <div class="col-lg-4" data-aos="fade-up">
+        <img src="assets/img/aboveTwo3.gif" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-4" data-aos="fade-up">
+        <img src="assets/img/massFraction.gif" class="img-fluid" alt="">
+      </div>
+
+      <p></p>
+        <br>
+        <p></p>
+
+
+      <div class="col-lg-4" data-aos="fade-up">
+        <img src="assets/img/dd.gif" class="img-fluid" alt="" width="400" height="400">
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up">
+
+          <p> Some outputs from these type of simulations include:        </p>
+
+          <ul>
+          <li> Time it takes for the valves to open and how long it takes to fill the pack with vent gas.        </li>
+          <li> Preferable path of the hot vent gas.        </li>
+          <li> Gas temperature @ the valves.        </li>
+          <li> Gauge pressure of the pack’s air gap and location of high-pressure spots on the top cover of the pack.        </li>
+          <li> Approximation of the sealing temperature and location of hot spots.        </li>
+          <li> Location of the module that receives the highest thermal load.        </li>
+          <li> With these outputs, it is possible to add mica sheets/insulation layers (on modules and busbars), deflectors, thermal barriers, etc., where needed.        </li>
+          <li> These results serve as inputs for module-to-module thermal propagation (M2M TP) (to predict the time it takes for the non-event module to go into TR) and for the vehicle team.        </li>
+          </ul>
+
+      </div>
+
+      <p></p>
+        <br>
+        <p></p>
+
+      <p> <b>2. Module-to-module thermal propagation </b> </p>
+
+      
+      <ul>
+       
+        <li> Inputs for this case usually come from ARC tests (maximum energy released, self-heating and short-circuit triggering temperatures) and gas venting simulations      </li>
+        <li> The main output of M2M TP is the time it takes for the non-event module (NEM) to go into thermal runaway.        </li>
+        <li> For this pack, I considered two cases: <b>case 1</b> which does not have mica sheets, insulation layers or coolant, and <b>case 2</b>, which does have the three aforementioned things (but with still coolant) </li>
+      </ul>
+
+      <div class="col-lg-3" data-aos="fade-up">
+        <img src="assets/img/mica.png" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-4" data-aos="fade-up">
+        <img src="assets/img/avg.png" class="img-fluid" alt="">
+      </div>
+
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <img src="assets/img/m2m.gif" class="img-fluid" alt="">
+      </div>
+
+
+      <p></p>
+      <br>
+      <p></p>
+
+      <div class="col-lg-5" data-aos="fade-up">
+
+
+
+        <img src="assets/img/table.png" class="img-fluid" alt="" >
+
+        <img src="assets/img/pie.png" class="img-fluid" alt="" idth="50" height="50">
+
+      </div>
+
+
+      
+    <div class="col-lg-7" data-aos="fade-up">
+
+      
+      <p>Observations from this example: </p>
+
+      <ul>
+        <li> Most of the heat transferred to the NEM is by conduction via the cooling plate        </li>
+        <li> Mica sheets and insulation layers only provide protection for convection (and radiation). Although they are mainly placed on the modules/HV BBs to protect them from external arcing. Also, the MFR profile used here is a very relaxed scenario (there are cases 5 times bigger).        </li>
+         <li> Adding coolant (still) doesn’t make a big difference in delaying the TP. However, coolant flowing should improve this delay. Although in some of the TP tests coolant is not present at all.</li>
+        <li> Cell-to-cell TP can be delayed by using insulation layers (e.g. aerogels) between the cells and by directing the gas towards the top cover, which may reduce the risk of short circuit inside the module.</li>
+
+      </ul>
+    
+    </div>
+
+    </div>
+
+
+
+
+    
+  </div>
+</section><!-- End Portfolio Section -->
+
+
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
