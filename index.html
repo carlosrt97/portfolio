@@ -325,15 +325,13 @@
     </section><!-- End Resume Section -->
 
 
-
-
 <!-- ======= Portfolio Section ======= -->
 <section id="pack" class="portfolio section-bg">
   <div class="container">
 
     <div class="section-title">
       <h2>Dummy Battery Pack</h2>
-      <p> I designed a very simplified battery pack just to show a few outputs that can be obtained from battery gas venting and module-to-module thermal propagation simulations </p>
+      <p> I designed a very simplified battery pack just to show a few outputs that can be obtained from battery gas venting and module-to-module thermal propagation (M2M TP) simulations      </p>
     </div>
 
 
@@ -398,7 +396,7 @@
       <p> <b>1. Battery Gas Venting </b> </p>
 
       <ul>
-        <li> Generally, inputs come from 1D simulation and heating pad tests, and represent the mass flow rate (MFR) released by a single cell in a thermal runaway (TR) event.</li>
+        <li> Generally, inputs come from 1D simulation and heating pad tests, and represent the mass flow rate (MFR) released by a single cell (or even multiple cells) in a thermal runaway (TR) event.</li>
         <li>  The MFR profile used here corresponds to a very relaxed scenario (usually it can be 5 times bigger in magnitude).</li>
       </ul>
 
@@ -429,10 +427,10 @@
 
       <div class="col-lg-7" data-aos="fade-up">
 
-          <p> Some outputs from these type of simulations include:        </p>
+          <p> Some outputs from these types of simulations include:        </p>
 
           <ul>
-          <li> Time it takes for the valves to open and how long it takes to fill the pack with vent gas.        </li>
+          <li> Time it takes for the valves to open and how long it takes for the pack to be filled with vent gas.       </li>
           <li> Preferable path of the hot vent gas.        </li>
           <li> Gas temperature @ the valves.        </li>
           <li> Gauge pressure of the pack’s air gap and location of high-pressure spots on the top cover of the pack.        </li>
@@ -452,23 +450,22 @@
 
       
       <ul>
-       
         <li> Inputs for this case usually come from ARC tests (maximum energy released, self-heating and short-circuit triggering temperatures) and gas venting simulations      </li>
         <li> The main output of M2M TP is the time it takes for the non-event module (NEM) to go into thermal runaway.        </li>
-        <li> For this pack, I considered two cases: <b>case 1</b>, which does not have mica sheets, insulation layers or coolant, and <b>case 2</b>, which does have the three aforementioned things (but with still coolant) </li>
+        <li> For this pack, I considered three cases: <b>case 1</b>, which does not have mica sheets, insulation layers or coolant, <b>case 2</b>, which does have the three aforementioned things (but with still coolant), and <b>case 3</b>, which is the same as case 2 but with the coolant flowing (inlet @ 5 lpm)  </li>
       </ul>
 
       <div class="col-lg-3" data-aos="fade-up">
-        <img src="assets/img/mica.PNG" class="img-fluid" alt="">
+        <img src="assets/img/mica.png" class="img-fluid" alt="">
       </div>
 
       <div class="col-lg-4" data-aos="fade-up">
-        <img src="assets/img/avg.PNG" class="img-fluid" alt="">
+        <img src="assets/img/avgtemp.png" class="img-fluid" alt="">
       </div>
 
 
       <div class="col-lg-5" data-aos="fade-up">
-        <img src="assets/img/m2m_2.gif" class="img-fluid" alt="">
+        <img src="assets/img/m2m_low.gif" class="img-fluid" alt="">
       </div>
 
 
@@ -476,7 +473,7 @@
       <br>
       <p></p>
 
-      <div class="col-lg-5" data-aos="fade-up">
+      <div class="col-lg-6" data-aos="fade-up">
 
 
 
@@ -486,16 +483,16 @@
 
 
       
-    <div class="col-lg-7" data-aos="fade-up">
+    <div class="col-lg-6" data-aos="fade-up">
 
       
       <p>Observations from this example: </p>
 
       <ul>
-        <li> Most of the heat transferred to the NEM is by conduction via the cooling plate (80%)        </li>
-        <li> Mica sheets and insulation layers only provide protection for convection (and radiation). Although they are mainly placed on the modules/HV BBs to protect them from external arcing. Also, the MFR profile used here is a very relaxed scenario (there are cases 5 times bigger).        </li>
-         <li> Adding coolant (still) doesn’t make a big difference in delaying the TP. However, coolant flowing should improve this delay. Although in some of the TP tests coolant is not present at all.</li>
-        <li> Cell-to-cell TP can be delayed by using insulation layers (e.g. aerogels) between the cells and by directing the gas towards the top cover, which may reduce the risk of short circuit inside the module.</li>
+        <li> Conduction via the cooling plate is the mode of heat transfer that predominates (77%), while convection due to vent gas is the second one (20%).       </li>
+        <li> Mica sheets and insulation layers only provide protection for convection (and radiation). Although they are usually placed on the modules/HV BBs to protect them from external arcing. Also, the MFR profile used here is a very relaxed scenario (there are cases 5 times bigger).        </li>
+         <li> The time it takes for the first cell of the NEM to trigger the short-circuit phase is 5.4 min (without coolant). If static coolant is added, this time is delayed by 1 min, and by 3 min if it is flowing.        </li>
+        <li> Adding static coolant didn't change the cell-to-cell (C2C) TP time in the EM, but if it is flowing, it is delayed by 1 min. It can be further greatly improved by using insulation layers (e.g. aerogels) between the cells and by directing the gas towards the top cover, which may also reduce the risk of short circuit inside the module. </li>
 
       </ul>
     
