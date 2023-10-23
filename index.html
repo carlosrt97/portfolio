@@ -273,13 +273,13 @@
               <ul>
                 <li>Responsible for thermal and flow modeling and analyses of electric vehicle (EV) propulsion systems: HV battery packs and its
                   subsystems, such as battery cooling systems.</li>
-                <li>Among the types of analyses I commonly perform include: 3D-conjugate heat transfer, thermal runaway, and battery gas venting. </li>
+                <li>Among the types of analyses I commonly perform include: 3D-conjugate heat transfer, thermal runaway and battery gas venting. </li>
                 <li>Constantly collaborating with design and release teams, test engineers, program chief engineers and program managers to execute
                   analyses for performance prediction, design feedback/optimization, and to correlate simulation results with test data.</li>
-                <li>Developed and implemented new methodologies, such as battery gas venting and melting, which are now used as references for
-                  current and future analyses/simulations.</li>
-                  <li>Working in projects of Maserati (M189) and Ram (three programs of Heavy Duty Trucks).</li>
-                  <li>Software used: Star CCM, ANSA, and HPC resources.</lli>
+                <li>Performed an exhaustive root cause analysis on a Maserati program (M189) by implementing for the first time a battery gas venting methodology, which has since become a standard practice for every new battery and the results are currently used as references.</li>
+                  <li>Developed other methodologies such as melting and particle tracking, and incorporated them into thermal runaway simulations at pack level.</li>
+                  <li>Additional programs I support are Maserati (M240 and M9S) and Ram (three programs of Heavy Duty Trucks).</li>
+                  <li>Software used: Star CCM+, ANSA and HPC resources</li>
               </ul>
             </div>
             <div class="resume-item">
@@ -409,7 +409,7 @@
 
 
       <div class="col-lg-4" data-aos="fade-up">
-        <img src="assets/img/aboveTwo3.gif" class="img-fluid" alt="">
+        <img src="assets/img/aboveTwo4.gif" class="img-fluid" alt="">
       </div>
 
       <div class="col-lg-4" data-aos="fade-up">
@@ -422,7 +422,7 @@
 
 
       <div class="col-lg-4" data-aos="fade-up">
-        <img src="assets/img/dd.gif" class="img-fluid" alt="" width="400" height="400">
+        <img src="assets/img/spectemp.gif" class="img-fluid" alt="" width="400" height="400">
       </div>
 
       <div class="col-lg-7" data-aos="fade-up">
@@ -452,7 +452,7 @@
       <ul>
         <li> Inputs for this case usually come from ARC tests (maximum energy released, self-heating and short-circuit triggering temperatures) and gas venting simulations      </li>
         <li> The main output of M2M TP is the time it takes for the non-event module (NEM) to go into thermal runaway.        </li>
-        <li> For this pack, I considered three cases: <b>case 1</b>, which does not have mica sheets, insulation layers or coolant, <b>case 2</b>, which does have the three aforementioned things (but with still coolant), and <b>case 3</b>, which is the same as case 2 but with the coolant flowing (inlet @ 5 lpm)  </li>
+        <li> For this pack, I considered four cases: <b>case 1</b>, which does not have mica sheets, insulation layers or coolant, <b>case 2</b>, which does have the three aforementioned things (but with static coolant), <b>case 3</b>, which is the same as case 2 but with coolant flowing (inlet @ 5 lpm), and <b>case 4</b> which is the same as the previous case but @ 10 lpm. </li>
       </ul>
 
       <div class="col-lg-3" data-aos="fade-up">
@@ -465,7 +465,7 @@
 
 
       <div class="col-lg-5" data-aos="fade-up">
-        <img src="assets/img/m2m_low.gif" class="img-fluid" alt="">
+        <img src="assets/img/m2m_3.gif" class="img-fluid" alt="">
       </div>
 
 
@@ -477,7 +477,7 @@
 
 
 
-        <img src="assets/img/table.PNG" class="img-fluid" alt="" >
+        <img src="assets/img/table3.PNG" class="img-fluid" alt="" >
 
       </div>
 
@@ -491,7 +491,7 @@
       <ul>
         <li> Conduction via the cooling plate is the mode of heat transfer that predominates (77%), while convection due to vent gas is the second one (20%).       </li>
         <li> Mica sheets and insulation layers only provide protection for convection (and radiation). Although they are usually placed on the modules/HV BBs to protect them from external arcing. Also, the MFR profile used here is a very relaxed scenario (there are cases 5 times bigger).        </li>
-         <li> The time it takes for the first cell of the NEM to trigger the short-circuit phase is 5.4 min (without coolant). If static coolant is added, this time is delayed by 1 min, and by 3 min if it is flowing. However, in most of the TP tests coolant is not present at all.      </li>
+         <li> The time it takes for the first cell of the NEM to trigger the short-circuit phase is 5.4 min (without coolant). If static coolant is added, this time is delayed by 1 min, and by 3 min if it is flowing @ 5 lpm. However, the NEM does not go into TR if the coolant is flowing @ 10 lpm (at the inlet). Although in some TP tests coolant is not present at all.     </li>
         <li> Adding static coolant didn't change the cell-to-cell (C2C) TP time in the EM, but if it is flowing, it is delayed by 1 min. It can be further greatly improved by using insulation layers (e.g. aerogels) between the cells and by directing the gas towards the top cover, which may also reduce the risk of short circuit inside the module. </li>
 
       </ul>
