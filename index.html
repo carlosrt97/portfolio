@@ -192,10 +192,12 @@
               <li>Star CCM+</li>
               <li>ANSA</li>
               <li>ANSYS (Mechanical & Fluent)</li>
-              <li>Solidworks</li>
+              <li>NX</li>
+              <li>SolidWorks</li>
               <li>Inventor</li>
               <li>Teamcenter</li>
               <li>ParaView</li>
+              <li>EES</li>
             </ul>
 
           </div>
@@ -271,15 +273,15 @@
               Part of the global team: Virtual Engineering – Energy Storage (HV Battery/Fuel cell) and Supply Systems.
 
               <ul>
-                <li>Responsible for thermal and flow modeling and analyses of electric vehicle (EV) propulsion systems: HV battery packs and its
-                  subsystems, such as battery cooling systems.</li>
-                <li>Among the types of analyses I commonly perform include: 3D-conjugate heat transfer, thermal runaway and battery gas venting. </li>
+                <li>Responsible for thermal, flow and electro-thermal modeling and analyses of EV propulsion systems: high voltage battery packs and its subsystems, such as battery cooling systems.</li>
+                <li>Among the types of analyses I commonly perform include 3D conjugate heat transfer, thermal runaway, battery gas venting and electro-thermal.</li>
                 <li>Constantly collaborating with design and release teams, test engineers, program chief engineers and program managers to execute
                   analyses for performance prediction, design feedback/optimization, and to correlate simulation results with test data.</li>
                 <li>Performed an exhaustive root cause analysis on a Maserati program (M189) by implementing for the first time a battery gas venting methodology, which has since become a standard practice for every new battery and the results are currently used as references.</li>
                   <li>Developed other methodologies such as melting and particle tracking, and incorporated them into thermal runaway simulations at pack level.</li>
+                  <li>Participating in design optimization activities (e.g. cold plate and housing/tray) for cost reduction of HV battery packs. </li>
                   <li>Additional programs I support are Maserati (M240 and M9S) and Ram (three programs of Heavy Duty Trucks).</li>
-                  <li>Software used: Star CCM+, ANSA and HPC resources</li>
+                  <li>Software used: Star CCM+, ANSA, NX, and HPC resources</li>
               </ul>
             </div>
             <div class="resume-item">
@@ -288,10 +290,10 @@
               <p> <b>UNAM,</b> <em>Mexico City, Mexico</em></p>
               <ul>
                 <li>Performed fluid-structure interaction numerical simulations of the 3D flow around a rigid oscillating airfoil, using a
-                  high-performance computing multi-physics solver (Alya) adapted to multiple computer clusters, and generated grids using ANSA.</li>
-                <li>Validated the model with experimental data and 2D simulations, and carried out aerodynamic analyses such as that of the wake’s
+                  high-performance computing multi-physics software (Alya) adapted to multiple computer clusters, and generated grids using ANSA.</li>
+                <li>Validated the model with experimental data and 2D simulations, and carried out analyses of the wake’s
                   structure, vortex shedding, nonlinear forces (drag and lift) and of the transition to a turbulent flow due to instabilities.</li>
-                <li>Presented these results at two national congresses of fluid dynamics.</li>
+                <li>Presented these results at two congresses of fluid dynamics.</li>
               </ul>
             </div>
             <div class="resume-item">
@@ -331,7 +333,7 @@
 
     <div class="section-title">
       <h2>Dummy Battery Pack</h2>
-      <p> I designed a very simplified battery pack just to show a few outputs that can be obtained from battery gas venting and module-to-module thermal propagation (M2M TP) simulations      </p>
+      <p> I designed a very basic battery pack just to show a few outputs that can be obtained from simplified thermal runaway simulations. All data inputs can be easily found in the literature.    </p>
     </div>
 
 
@@ -347,10 +349,9 @@
           <li> Internal busbars</li>
           <li> Endplates</li>
           <li> Busbar frames </li>
-          <li> Insulation layers</li>
+          <li> Insulation layers </li>
           <li>Mica sheets </li>
-          <li>U-frame</li>
-          <li> Compression pads</li>
+          <li>Module's case</li>
   
         </ul>
       </div>
@@ -509,6 +510,188 @@
 
 
 
+<section id="cold" class="portfolio section-bg">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Battery, module & cold plate</h2>
+      <p> It is possible to account for the heat generated due to the current in the internal (C2C) busbars. However, because of the small length and cross-sectional area of these busbars, the amount of heat generated is relatively small. For this case, I designed a simplified battery module that consists of the following:   </p>
+    </div>
+
+    <div class="row skills-content">
+
+      <div class="col-lg-4" data-aos="fade-up">
+        <ul>
+          <li>Jellyrolls (12S2P configuration)          </li>
+          <li> Casings</li>
+          <li> Internal/C2C BBs          </li>
+          <li> External BBs          </li>
+          <li> TIM          </li>
+          <li>Cold plate          </li>
+          <li>Aerogels</li>
+  
+        </ul>
+      </div>
+
+   
+
+    </div>
+
+    
+
+
+    <div class="row skills-content">
+
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <img src="assets/img/mod_mod.png" class="img-fluid" alt="">
+      </div>
+
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <img src="assets/img/mod_current.PNG" class="img-fluid" alt="">
+      </div>
+
+
+
+
+      <p> The module has a cold/cooling plate where coolant is flowing @ 10 lpm (through the inlet), and each cell releases around 60 W of heat. In this case there is no convective boundary condition to take into account the effect of the ambient. Thus, the ohmic heat generated by the 120 A current didn't reach a steady state condition.   </p>
+
+
+      <p></p>
+      <br>
+      <p></p>
+
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <img src="assets/img/plot.png" class="img-fluid" alt="">
+      </div>
+
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <img src="assets/img/mod_plate.png" class="img-fluid" alt="">
+      </div>
+
+
+
+
+      <p>It is possible to measure the volumetric flow rate (VFR) through each channel of the cold plate to see how balanced the flow is. The highest difference was for channel 4 that was 25.6% above the target VFR, while the lowest was for channels 1, 2, 7 and 8, which were around 7.8% below the target. Additionally, the pressure drop for this case was around 6.5 kPa. The main reason for this high PD is the length of the channels.  </p>
+      
+      <p></p>
+      <br>
+      <p></p>
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <img src="assets/img/mod_temp.png" class="img-fluid" alt="">
+      </div>
+
+
+      <div class="col-lg-6" data-aos="fade-up">
+        <img src="assets/img/mod_temp2.png" class="img-fluid" alt="">
+      </div>
+
+
+      <p> The temperature distribution of the cells is shown in the two figures above. The average heat transfer coefficient (HTC) for this case is around 1530 W/m2K, and the maximum temperature difference within each cell is almost the same for all of them, with an average of 11.4ºC. Cells 21 and 22 have the highest average temperature, and not the last two, since those are exposed to a greater surface area of coolant. The trend of the temperature of the cells is better seen in the immersion cooling section.   </p>
+
+    
+
+      <p></p>
+      <br>
+      <p></p>
+
+
+
+
+
+
+
+    
+  </div>
+</section><!-- End Portfolio Section -->
+
+
+
+
+<section id="immersion" class="portfolio section-bg">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Battery, immersion cooling</h2>
+    </div>
+
+    
+
+    <div class="row skills-content">
+
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <img src="assets/img/imm_mod.png" class="img-fluid" alt="">
+      </div>
+
+
+      <div class="col-lg-7" data-aos="fade-up">
+
+          <p> To compare the performance between a cold plate and immersion cooling, I made slight modifications to the previous design. I replaced the aerogels with small seperators, which are placed every two cells, and I let the dielectric fluid flow into the module from the bottom part of the end plate and leave the module from the top part. The inputs are the same as the previous case, with the only difference of the coolant being a dielectric fluid.   </p>
+
+
+      </div>
+
+      <p></p>
+        <br>
+        <p></p>
+
+
+      <p></p>
+      <br>
+      <p></p>
+
+
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <img src="assets/img/imm_temp.PNG" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up">
+        <img src="assets/img/imm_temp2.png" class="img-fluid" alt="">
+      </div>
+
+      <p>The temperature distribution in the cells is largely improved by using immersion cooling, as seen in the two figures above. It is observed that the last two cells have the highest temperatures, but this can be easily improved by allowing more fluid flow towards those cells, and restricting the flow from going towards the first two cells. The pressure drop in this case is almost the same as using the cold plate of the previous case.  </p>
+
+
+      <p></p>
+      <br>
+      <p></p>
+
+      <div class="col-lg-6" data-aos="fade-up">
+        <img src="assets/img/imm_table.png" class="img-fluid" alt="">
+      </div>
+
+
+
+      <div class="col-lg-6" data-aos="fade-up">
+
+        <p> The left figure shows the minimum, maximum and average temperature of every cell, when using a cold plate and immersion cooling. It is clear that the temperature gradient is greatly reduced when using the latter approach.    </p>
+        <p> By using immersion cooling, the average of the maximum temperature difference of all cells is around 2ºC, which is an 82% reduction compared to using a standard cold plate.   </p>
+
+
+    </div>
+
+    <p></p>
+      <br>
+      <p></p>
+
+      
+
+
+
+    
+  </div>
+</section><!-- End Portfolio Section -->
+
+
+
+
+
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
@@ -562,37 +745,9 @@
         </ul>
 
 
+    
 
-        <p> <b>3. Quantum tunneling effect</b> </p>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-4" data-aos="fade-up">
-            <video width="420" height="380" controls>
-              <source src="assets/img/abs2.mov" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up">
-            <video width="420" height="380" controls>
-              <source src="assets/img/real2.mov" type="video/mp4">
-            </video>
-          </div>
-          
-          <div class="col-lg-4" data-aos="fade-up">
-            <img src="assets/img/wave.png" class="img-fluid" alt="">
-          </div>
-
-          <ul>
-            <li> It is posible to solve the time-dependent Schrödinger equation by using the Hamiltonian operator in a matrix form, as shown in the right diagram.            </li>
-            <li> The left animation shows the propagation of the probability density function and the middle one shows the wave packet, for a potential corresponding to a barrier and a Gaussian initial wave function.            </li>
-            <li> Possible outputs from these simulations are the probabilities for the wave function to reflect and transmit, in this case it was 0.887 and 0.113, respectively. Classicaly, the wave would have been completely reflected.            </li>
-          </ul>
-       
-
-
-
-          <p> <b>4.  Parallel solution of the 2D heat equation</b> </p>
+          <p> <b>3.  Parallel solution of the 2D heat equation</b> </p>
         <div class="col-lg-4" data-aos="fade-up">
           <video width="410" height="300" controls>
             <source src="assets/img/parallel2.mov" type="video/mp4">
@@ -626,7 +781,7 @@
 
 
 
-        <p> <b>5. Triple pendulum </b> </p>
+        <p> <b>4. Triple pendulum </b> </p>
 
         <div class="row skills-content">
 
@@ -652,7 +807,31 @@
           </ul>
 
 
+          <p> <b>5. Quantum tunneling effect</b> </p>
 
+          <div class="row skills-content">
+  
+            <div class="col-lg-4" data-aos="fade-up">
+              <video width="420" height="380" controls>
+                <source src="assets/img/abs2.mov" type="video/mp4">
+              </video>
+            </div>
+  
+            <div class="col-lg-4" data-aos="fade-up">
+              <video width="420" height="380" controls>
+                <source src="assets/img/real2.mov" type="video/mp4">
+              </video>
+            </div>
+            
+            <div class="col-lg-4" data-aos="fade-up">
+              <img src="assets/img/wave.png" class="img-fluid" alt="">
+            </div>
+  
+            <ul>
+              <li> It is posible to solve the time-dependent Schrödinger equation by using the Hamiltonian operator in a matrix form, as shown in the right diagram.            </li>
+              <li> The left animation shows the propagation of the probability density function and the middle one shows the wave packet, for a potential corresponding to a barrier and a Gaussian initial wave function.            </li>
+              <li> Possible outputs from these simulations are the probabilities for the wave function to reflect and transmit, in this case it was 0.887 and 0.113, respectively. Classicaly, the wave would have been completely reflected.            </li>
+            </ul>
 
         
 
@@ -824,8 +1003,6 @@
             <li> High Performance Computing </li>
             <li> Stability and Turbulence </li>
             <li> Heat Transfer </li>
-            <li> Analytical Mechanics </li>
-            <li> Statistical Mechanics </li>
        <!--     <li> Analytical Mechanics </li>
             <li> Statistical Mechanics </li>
 -->
